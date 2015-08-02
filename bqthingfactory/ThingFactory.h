@@ -123,14 +123,18 @@ public:
     }
     
     std::vector<std::string> getTags() const {
-        return m_tags.keys();
+        std::vector<std::string> tags;
+        for (TagURIMap::const_iterator i = m_tags.begin(); i != m_tags.end(); ++i) {
+            tags.push_back(i->first);
+        }
+        return tags;
     }
     
     std::string getURIFor(std::string tag) const {
         if (m_tags.find(tag) == m_tags.end()) {
             throw UnknownTagException(tag);
         }
-        return m_tags[tag];
+        return m_tags.at(tag);
     }
 
     Thing *create(std::string uri, Parameters p) const {
