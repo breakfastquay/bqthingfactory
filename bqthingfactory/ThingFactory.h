@@ -39,6 +39,8 @@
 #include <vector>
 #include <iostream>
 
+//#define DEBUG_THINGFACTORY 1
+
 namespace breakfastquay {
 
 template <typename Thing, typename Parameters>
@@ -186,6 +188,7 @@ public:
     }
     
     void registerBuilder(std::string uri, Builder *builder, std::vector<std::string> tags) {
+#ifdef DEBUG_THINGFACTORY
         std::cerr << "ThingFactory::registerBuilder: uri " << uri << " (" << tags.size() << " tag(s))" << std::endl;
         if (m_registry.find(uri) != m_registry.end()) {
             std::cerr << "Turbot::ThingFactory::registerBuilder: WARNING: Duplicate URI: "
@@ -195,11 +198,14 @@ public:
             }
             std::cerr << ")" << std::endl;
         }
+#endif
 	m_registry[uri] = builder;
         for (size_t i = 0; i < tags.size(); ++i) {
             if (m_tags.find(tags[i]) != m_tags.end()) continue;
+#ifdef DEBUG_THINGFACTORY
             std::cerr << "ThingFactory::registerBuilder: tag " << tags[i] 
                       << " -> " << uri << std::endl;
+#endif
             m_tags[tags[i]] = uri;
         }
     }
