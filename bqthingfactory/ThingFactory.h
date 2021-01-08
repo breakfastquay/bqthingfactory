@@ -3,7 +3,7 @@
 /*
     bqthingfactory
 
-    Copyright 2007-2015 Particular Programs Ltd.
+    Copyright 2007-2021 Particular Programs Ltd.
 
     Permission is hereby granted, free of charge, to any person
     obtaining a copy of this software and associated documentation

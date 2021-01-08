@@ -12,7 +12,7 @@ C++ standard required: C++98 (does not use C++11)
 
  * See also: [bqvec](https://hg.sr.ht/~breakfastquay/bqvec) [bqfft](https://hg.sr.ht/~breakfastquay/bqfft) [bqresample](https://hg.sr.ht/~breakfastquay/bqresample) [bqaudioio](https://hg.sr.ht/~breakfastquay/bqaudioio) [bqaudiostream](https://hg.sr.ht/~breakfastquay/bqaudiostream)
 
-Copyright 2007-2020 Particular Programs Ltd.  Under a permissive
+Copyright 2007-2021 Particular Programs Ltd.  Under a permissive
 BSD/MIT-style licence: see the file COPYING for details.
 
 
